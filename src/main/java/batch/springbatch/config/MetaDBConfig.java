@@ -1,4 +1,4 @@
-package batch.spring_batch.config;
+package batch.springbatch.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;

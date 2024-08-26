@@ -1,4 +1,4 @@
-package batch.spring_batch.config;
+package batch.springbatch.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 @Configuration
 @EnableJpaRepositories(
-        basePackages = "batch.spring-batch.repository",
+        basePackages = "batch.springbatch.repository",
         entityManagerFactoryRef = "dataEntityManager",
         transactionManagerRef = "dataTransactionManager"
 )
@@ -34,8 +34,8 @@ public class DataDBConfig {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 
         em.setDataSource(dataDBSource());
-        em.setPackagesToScan(new String[]{"batch.spring-batch.entity"});
-        em. setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+        em.setPackagesToScan(new String[]{"batch.springbatch.entity"});
+        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         HashMap<String, Object> properties = new HashMap<>();
         properties.put("hibernate.hbm2ddl.auto", "update");
